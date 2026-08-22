@@ -1,5 +1,5 @@
 // GANTI DENGAN URL WEB APP GOOGLE APPS SCRIPT ANDA (DEPLOYMENT EXECUTABLE URL)
-const GAS_URL = "https://script.google.com/macros/s/AKfycb.../exec";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbzje00B22q4X8iPEjFmIkdfsCVMSkaiWUbSQVatzcxZh_fzJlAKL1U3JhFdT4Ol5fam/exec";
 
 document.getElementById('careerForm').addEventListener('submit', async function(e) {
   e.preventDefault();
