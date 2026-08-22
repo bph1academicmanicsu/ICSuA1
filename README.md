@@ -1,4 +1,4 @@
-# Educational Career & Overseas Study Planner
+# Educational Career & Overseas Study Planner By BPH A1-ManicSu
 
 Web Frontend interaktif untuk membuat dokumen infografis panduan kuliah luar negeri, rekomendasi beasiswa, dan perencanaan karir global berbasis AI.
 
