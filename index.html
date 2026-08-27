@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panduan Kuliah L.N & Karir - Generator Infografis</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; }
@@ -15,7 +13,7 @@
 <body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
 
   <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
     <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-blue-500/30">
@@ -26,9 +24,20 @@
           <p class="text-xs text-slate-400">Generator Panduan Kuliah & Beasiswa</p>
         </div>
       </div>
-      <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full font-medium">
-        ● Apps Script Active
-      </span>
+      
+      <div class="flex items-center gap-3">
+        <!-- Tombol Petunjuk Penggunaan -->
+        <button id="btnOpenGuide" type="button" class="flex items-center gap-2 text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-3 py-2 rounded-xl transition font-medium">
+          <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>Petunjuk</span>
+        </button>
+
+        <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-2 rounded-xl font-medium hidden sm:inline-block">
+          ● Apps Script Active
+        </span>
+      </div>
     </div>
   </header>
 
@@ -49,42 +58,41 @@
       <form id="careerForm" class="space-y-6">
         
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- Nama Siswa -->
           <div>
             <label for="nama" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Nama Lengkap Siswa *</label>
             <input type="text" id="nama" required placeholder="Contoh: Ahmad Rizky" 
-              class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+              class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
           </div>
 
-          <!-- Minat Prodi -->
           <div>
             <label for="prodi" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Minat Program Studi *</label>
             <input type="text" id="prodi" required placeholder="Contoh: Computer Science / Teknik Informatika" 
-              class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+              class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- Prestasi SMA -->
           <div>
             <label for="prestasi" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Prestasi / Portofolio SMA *</label>
             <input type="text" id="prestasi" required placeholder="Contoh: Medali Emas OSN Informatika, Pelatnas" 
-              class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+              class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
           </div>
 
-          <!-- Target Karir -->
           <div>
             <label for="karir" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Target Karir / Cita-cita *</label>
             <input type="text" id="karir" required placeholder="Contoh: AI Research Scientist / Software Engineer" 
-              class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+              class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
           </div>
         </div>
 
-        <!-- Keinginan Khusus -->
+        <!-- Keinginan Khusus (Textarea Ditinggikan) -->
         <div>
-          <label for="keinginan" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Keinginan / Preference Khusus (Opsional)</label>
-          <input type="text" id="keinginan" placeholder="Contoh: Fokus universitas kawasan Asia / Beasiswa Penuh LPDP BIM" 
-            class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+          <div class="flex justify-between items-center mb-2">
+            <label for="keinginan" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Keinginan / Preference Khusus (Opsional)</label>
+            <span class="text-xs text-blue-400 cursor-pointer hover:underline" onclick="toggleGuideModal(true)">Lihat Contoh Pengisian</span>
+          </div>
+          <textarea id="keinginan" rows="5" placeholder="Masukkan detail tambahan seperti: target benua/negara (misal: Asia/Singapura), nama kampus impian (NUS/NTU), kisaran biaya hidup, target beasiswa (Garuda/Unggulan/LPDP), dll." 
+            class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition leading-relaxed"></textarea>
         </div>
 
         <!-- Submit Button -->
@@ -108,11 +116,81 @@
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- MODAL PETUNJUK PENGGUNAAN -->
+  <div id="guideModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <!-- Modal Header -->
+      <div class="p-5 border-b border-slate-800 flex justify-between items-center bg-slate-800/50">
+        <h3 class="font-bold text-lg text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Petunjuk Pengisian Form & Prompt Dinamis
+        </h3>
+        <button id="btnCloseGuide" class="text-slate-400 hover:text-white text-xl font-bold">&times;</button>
+      </div>
+      
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-4 text-sm text-slate-300 leading-relaxed">
+        <p>Setiap informasi yang Anda masukkan pada formulir ini akan diolah secara dinamis oleh AI untuk menyusun rekomendasi infografis secara mendalam.</p>
+
+        <div class="space-y-3">
+          <div class="bg-slate-800/80 p-3 rounded-lg border border-slate-700/50">
+            <strong class="text-blue-400 block mb-1">1. Nama Lengkap & Minat Prodi</strong>
+            Isi dengan nama siswa serta jurusan target (misal: *Computer Science*, *Data Science*, *Teknik Elektro*).
+          </div>
+
+          <div class="bg-slate-800/80 p-3 rounded-lg border border-slate-700/50">
+            <strong class="text-blue-400 block mb-1">2. Prestasi SMA & Target Karir</strong>
+            Cantumkan portofolio akademik/non-akademik (misal: *Medali OSN*, *Pelatnas*, *Proyek Coding*) dan cita-cita profesi jangka panjang.
+          </div>
+
+          <div class="bg-slate-800/80 p-3 rounded-lg border border-slate-700/50">
+            <strong class="text-emerald-400 block mb-1">3. Keinginan / Preference Khusus (Opsional - Prompt Dinamis)</strong>
+            Kotak ini bersifat dinamis. Anda dapat memasukkan berbagai kriteria spesifik yang akan langsung disuntikkan ke dalam prompt AI, seperti:
+            <ul class="list-disc list-inside mt-2 space-y-1 text-slate-400 pl-2">
+              <li><b class="text-slate-200">Target Geografis:</b> Nama Benua (Eropa, Asia, Amerika) atau Negara (Singapura, Jepang, Jerman).</li>
+              <li><b class="text-slate-200">Kampus Spesifik:</b> Target universitas tertentu (misal: NUS, NTU, ETH Zurich, MIT).</li>
+              <li><b class="text-slate-200">Biaya Hidup & Anggaran:</b> Estimasi budget atau preferensi biaya hidup terjangkau.</li>
+              <li><b class="text-slate-200">Target Beasiswa:</b> Beasiswa Garuda, Beasiswa Unggulan, LPDP, BIM, dll.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-3 bg-blue-900/30 border border-blue-500/30 rounded-lg text-xs text-blue-200">
+          💡 <b>Fitur Otomatis Output PDF:</b> Sistem akan menyertakan link sumber resmi pada istilah penting (IELTS, TOEFL, Beasiswa Garuda, Beasiswa Unggulan, LPDP) dan diformat khusus dengan latar <i>Light Golden Rod Yellow</i> tanpa terpotong margin.
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-slate-800 bg-slate-800/50 text-right">
+        <button id="btnCloseGuideBtn" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-5 py-2 rounded-xl text-sm transition">Mengerti</button>
+      </div>
+    </div>
+  </div>
+
   <footer class="border-t border-slate-800 bg-slate-950/50 py-6 text-center text-xs text-slate-500">
     <p>© Academic-BPH A1- MANICSu. Powered by Google Apps Script & Gemini AI.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Logic Modal Petunjuk Penggunaan
+    const guideModal = document.getElementById('guideModal');
+    function toggleGuideModal(show) {
+      if (show) {
+        guideModal.classList.remove('hidden');
+      } else {
+        guideModal.classList.add('hidden');
+      }
+    }
+
+    document.getElementById('btnOpenGuide').addEventListener('click', () => toggleGuideModal(true));
+    document.getElementById('btnCloseGuide').addEventListener('click', () => toggleGuideModal(false));
+    document.getElementById('btnCloseGuideBtn').addEventListener('click', () => toggleGuideModal(false));
+    guideModal.addEventListener('click', (e) => {
+      if (e.target === guideModal) toggleGuideModal(false);
+    });
+  </script>
 </body>
 </html>
