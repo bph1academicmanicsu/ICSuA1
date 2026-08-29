@@ -57,10 +57,11 @@
       <form id="careerForm" class="space-y-6">
         
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <label for="nama" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Nama Lengkap Siswa *</label>
-            <input type="text" id="nama" required placeholder="Contoh: Ahmad Rizky" 
+         <div>
+            <label for="nisn" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">NISN *</label>
+            <input type="text" id="nisn" required placeholder="Contoh: 0123456789" inputmode="numeric" pattern="[0-9]*"
               class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+            <p class="text-xs text-slate-500 mt-1">Nama akan otomatis muncul di dokumen sesuai data terdaftar.</p>
           </div>
 
           <div>
