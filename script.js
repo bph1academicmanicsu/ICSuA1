@@ -22,8 +22,8 @@ document.getElementById('careerForm').addEventListener('submit', async function(
   statusAlert.className = "mt-6 p-4 rounded-xl border text-sm flex items-center gap-3";
 
   // Form Payload
-  const payload = {
-    nama: document.getElementById('nama').value.trim(),
+ const payload = {
+    nisn: document.getElementById('nisn').value.trim(),
     prodi: document.getElementById('prodi').value.trim(),
     prestasi: document.getElementById('prestasi').value.trim(),
     karir: document.getElementById('karir').value.trim(),
